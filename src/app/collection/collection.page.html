@@ -1,0 +1,106 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <img src="../../assets/img/arlogo.png" width="50px" style="display:inline-block" height="50px" style="margin-top:20px;margin-left:20px;" />
+    <ion-title style="display:inline-block;margin-bottom:20px;">
+      <p style="font-size:15px;margin:0px;">LA MACCHINA DEL TEMPO</p>
+      <p style="font-size:10px;font-weight:200;margin:0px;">MUSEO STORICO ALFA ROMEO</p>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title style="color:#AF1F2D">THROUGH THE YEARS</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>FROM 10 TO 30</ion-card-title>
+    </ion-card-header>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1">
+          <span class="slider-nav arrow-prev" (click)="slidePrev(sliderOne,slideWithNav)">
+            <div class="prev-icon-custom custon-nav" [class.disabled]="sliderOne.isBeginningSlide"></div>
+          </span>
+        </ion-col>
+        <ion-col size="10">
+
+          <ion-slides pager="true" [options]="slideOptsOne" #slideWithNav (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+            <ion-slide *ngFor="let s of sliderOne.slidesItems">
+              <img src="../../assets/img/ar{{s.id}}.jpg">
+            </ion-slide>
+          </ion-slides>
+
+        </ion-col>
+        <ion-col size="1">
+          <span class="slider-nav arrow-next" (click)="slideNext(sliderOne,slideWithNav)">
+            <div class="next-icon-custom custon-nav" [class.disabled]="sliderOne.isEndSlide"></div>
+          </span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>FROM 40 T0 60</ion-card-title>
+    </ion-card-header>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1">
+          <span class="slider-nav arrow-prev" (click)="slidePrev(sliderTwo,slideWithNav2)">
+            <div class="prev-icon-custom custon-nav" [class.disabled]="sliderTwo.isBeginningSlide"></div>
+          </span>
+        </ion-col>
+        <ion-col size="10">
+
+          <ion-slides pager="true" [options]="slideOptsTwo" #slideWithNav2 (ionSlideDidChange)="SlideDidChange(sliderTwo,slideWithNav2)">
+            <ion-slide *ngFor="let s of sliderTwo.slidesItems">
+              <img src="../../assets/img/ar{{s.id}}.jpg">
+            </ion-slide>
+          </ion-slides>
+
+        </ion-col>
+        <ion-col size="1">
+          <span class="slider-nav arrow-next" (click)="slideNext(sliderTwo,slideWithNav2)">
+            <div class="next-icon-custom custon-nav" [class.disabled]="sliderTwo.isEndSlide"></div>
+          </span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>FROM 70 TO 2010</ion-card-title>
+    </ion-card-header>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1">
+          <span class="slider-nav arrow-prev" (click)="slidePrev(sliderThree,slideWithNav3)">
+            <div class="prev-icon-custom custon-nav" [class.disabled]="sliderThree.isBeginningSlide"></div>
+          </span>
+        </ion-col>
+        <ion-col size="10">
+
+          <ion-slides pager="true" [options]="slideOptsThree" #slideWithNav3 (ionSlideDidChange)="SlideDidChange(sliderThree,slideWithNav3)">
+            <ion-slide *ngFor="let s of sliderThree.slidesItems">
+              <img src="../../assets/img/ar{{s.id}}.jpg">
+            </ion-slide>
+          </ion-slides>
+
+        </ion-col>
+        <ion-col size="1">
+          <span class="slider-nav arrow-next" (click)="slideNext(sliderThree,slideWithNav3)">
+            <div class="next-icon-custom custon-nav" [class.disabled]="sliderThree.isEndSlide"></div>
+          </span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

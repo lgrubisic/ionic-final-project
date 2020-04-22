@@ -1,0 +1,9 @@
+{
+  "name": "ARMS",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "8e54c584"
+}
